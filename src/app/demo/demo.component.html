@@ -1,11 +1,11 @@
-<select #countrySel (change)="changeCountry(countrySel.value)">
-    <option>--Select Country--</option>
+<select (change)="changeCountry($event.target.value)">
+    <option value="">--Select Country--</option>
     <option [value]="country.id" *ngFor="let country of arrCountries">{{country.name}}</option>
 </select>
 
 &nbsp;&nbsp;
 
 <select>
-    <option>--Select City--</option>
-        <option [value]="city.name" *ngFor="let city of arrCities | orderBy : 'name'">{{city.name}}</option>
+    <option [value]="">--Select City--</option>
+    <option [value]="city.name" *ngFor="let city of arrCities | orderBy : 'name'">{{city.name}}</option>
 </select>

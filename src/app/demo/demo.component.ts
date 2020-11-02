@@ -17,6 +17,10 @@ export class DemoComponent implements OnInit {
   }
 
   changeCountry(cId) {
+    if (!cId) {
+      this.arrCities = [];
+      return;
+    }
     this.arrStates = csc.getStatesOfCountry(cId);
     this.arrCities = [];
     this.arrStates.forEach(objItem => {
@@ -27,4 +31,3 @@ export class DemoComponent implements OnInit {
   }
 }
 
-// asdfasdf
