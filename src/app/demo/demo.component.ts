@@ -28,6 +28,7 @@ export class DemoComponent implements OnInit {
         this.arrCities.push(x);
       });
     });
+    // console.log(this.arrCities);
   }
 }
 
